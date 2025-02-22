@@ -1,0 +1,97 @@
+/* root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar-top {
+  width: 100%;
+  height: 10px;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: progress-horizontal;
+  animation-timeline: scroll();
+  transform-origin: 0%;
+}
+
+.bar-bottom {
+  width: 100%;
+  height: 10px;
+  background-color: aquamarine;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  animation: progress-horizontal;
+  animation-timeline: scroll();
+  transform-origin: 100%;
+}
+
+@keyframes progress-horizontal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar-right {
+  height: 100vh;
+  width: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: chartreuse;
+  animation: progress-vertical;
+  animation-timeline: scroll();
+  transform-origin: 100% 0%;
+}
+
+.bar-left {
+  height: 100vh;
+  width: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: chartreuse;
+  animation: progress-vertical;
+  animation-timeline: scroll();
+  transform-origin: 0% 100%;
+}
+
+@keyframes progress-vertical {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin: 50px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
